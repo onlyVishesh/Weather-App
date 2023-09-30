@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  background: #222;
+}
+
+.card {
+  width: 90%;
+  max-width: 40vw;
+  background: linear-gradient(135deg, #00febe, #5b548a);
+  color: #fff;
+  margin: 1vw auto 0px;
+  border-radius: 1vw;
+  padding: 2vw 1.5vw;
+  text-align: center;
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search input {
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  color: #555;
+  padding: 1vw 2vw;
+  height: 3vw;
+  border-radius: 30px;
+  flex: 1;
+  margin-right: 16px;
+  font-size: 2vw;
+}
+
+.search button {
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  border-radius: 50%;
+  width: 3vw;
+  height: 3vw;
+  cursor: pointer;
+}
+
+.search button img {
+  width: 1.5vw;
+}
+
+.weather-icon {
+  width: 15vw;
+  margin-top: 30px;
+}
+
+.weather h1 {
+  font-size: 5vw;
+  font-weight: 500;
+}
+
+.weather h2 {
+  font-size: 3vw;
+  font-weight: 400;
+  margin-top: -1vw;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3vw;
+  margin-top: 3vw;
+  gap: 4vw;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.col img {
+  width: 3vw;
+  margin-right: 2vw;
+}
+
+.humidity,
+.wind {
+  font-size: 2vw;
+  margin-top: -6px;
+}
+.humidity-p,
+.wind-p {
+  font-size: 1.5vw;
+}
+
+.weather {
+  display: none;
+}
+
+.error {
+  margin-top: 2vw;
+  font-size: 5vw;
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card {
+    width: 90%;
+    max-width: 70vw;
+    margin: 20vw auto 0px;
+    border-radius: 2vw;
+    padding: 2vw 1.5vw;
+  }
+
+  .search input {
+    padding: 1vw 2vw;
+    height: 5vw;
+    margin-right: 16px;
+    font-size: 2vw;
+  }
+
+  .search button {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .search button img {
+    width: 2vw;
+  }
+
+  .weather-icon {
+    width: 25vw;
+    margin-top: 30px;
+  }
+
+  .weather h1 {
+    font-size: 6vw;
+  }
+
+  .weather h2 {
+    font-size: 4vw;
+    margin-top: -1vw;
+  }
+
+  .details {
+    padding: 0 3vw;
+    margin-top: 3vw;
+    gap: 4vw;
+  }
+
+  .col img {
+    width: 5vw;
+    margin-right: 2vw;
+  }
+
+  .humidity,
+  .wind {
+    font-size: 4vw;
+    margin-top: -6px;
+  }
+
+  .humidity-p,
+  .wind-p {
+    font-size: 3vw;
+  }
+
+  .error {
+    margin-top: 2vw;
+    font-size: 5vw;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .card {
+    width: 90%;
+    max-width: 70vw;
+    margin: 20vw auto 0px;
+    border-radius: 2vw;
+    padding: 2vw 1.5vw;
+  }
+
+  .search input {
+    padding: 1vw 2vw;
+    height: 5vw;
+    margin-right: 16px;
+    font-size: 2vw;
+  }
+
+  .search button {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .search button img {
+    width: 2vw;
+  }
+
+  .weather-icon {
+    width: 25vw;
+    margin-top: 30px;
+  }
+
+  .weather h1 {
+    font-size: 6vw;
+  }
+
+  .weather h2 {
+    font-size: 4vw;
+    margin-top: -1vw;
+  }
+
+  .details {
+    padding: 0 3vw;
+    margin-top: 3vw;
+    gap: 4vw;
+  }
+
+  .col img {
+    width: 5vw;
+    margin-right: 2vw;
+  }
+
+  .humidity,
+  .wind {
+    font-size: 4vw;
+    margin-top: -6px;
+  }
+
+  .humidity-p,
+  .wind-p {
+    font-size: 3vw;
+  }
+
+  .error {
+    margin-top: 2vw;
+    font-size: 5vw;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .card {
+    width: 90%;
+    max-width: 70vw;
+    margin: 20vw auto 0px;
+    border-radius: 2vw;
+    padding: 2vw 1.5vw;
+  }
+
+  .search input {
+    padding: 1vw 2vw;
+    height: 5vw;
+    margin-right: 16px;
+    font-size: 2vw;
+  }
+
+  .search button {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .search button img {
+    width: 2vw;
+  }
+
+  .weather-icon {
+    width: 25vw;
+    margin-top: 30px;
+  }
+
+  .weather h1 {
+    font-size: 6vw;
+  }
+
+  .weather h2 {
+    font-size: 4vw;
+    margin-top: -1vw;
+  }
+
+  .details {
+    padding: 0 3vw;
+    margin-top: 3vw;
+    gap: 4vw;
+  }
+
+  .col img {
+    width: 5vw;
+    margin-right: 2vw;
+  }
+
+  .humidity,
+  .wind {
+    font-size: 4vw;
+    margin-top: -6px;
+  }
+
+  .humidity-p,
+  .wind-p {
+    font-size: 3vw;
+  }
+
+  .error {
+    margin-top: 2vw;
+    font-size: 5vw;
+  }
+}

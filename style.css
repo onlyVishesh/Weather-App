@@ -136,9 +136,10 @@ body {
 
 .history h3 {
   font-size: 2rem;
-  
 }
-.history-temp, .history-humidity, .history-wind {
+.history-temp,
+.history-humidity,
+.history-wind {
   font-size: 1.5rem;
   text-align: left;
 }
@@ -209,20 +210,19 @@ body {
     font-size: 5vw;
   }
   .history-cards {
-    position:static;
+    position: static;
     padding-top: 2rem;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
   }
-  
+
   .history-cards h2 {
     color: #fff;
     font-size: 2rem;
   }
 
-  
   .history {
     margin-top: 1rem;
     width: 14rem;
@@ -231,12 +231,13 @@ body {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .history h3 {
     font-size: 1.5rem;
-    
   }
-  .history-temp, .history-humidity, .history-wind {
+  .history-temp,
+  .history-humidity,
+  .history-wind {
     font-size: 1.2rem;
   }
 }
@@ -307,20 +308,19 @@ body {
     font-size: 5vw;
   }
   .history-cards {
-    position:static;
+    position: static;
     padding-top: 2rem;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
   }
-  
+
   .history-cards h2 {
     color: #fff;
     font-size: 1.5rem;
   }
 
-  
   .history {
     margin-top: 1rem;
     width: 10rem;
@@ -329,13 +329,14 @@ body {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .history h3 {
     font-size: 1rem;
-    
   }
-  .history-temp, .history-humidity, .history-wind {
-    font-size: .8rem;
+  .history-temp,
+  .history-humidity,
+  .history-wind {
+    font-size: 0.8rem;
   }
 }
 
@@ -405,20 +406,19 @@ body {
     font-size: 5vw;
   }
   .history-cards {
-    position:static;
+    position: static;
     padding-top: 2rem;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
   }
-  
+
   .history-cards h2 {
     color: #fff;
     font-size: 1.5rem;
   }
 
-  
   .history {
     margin-top: 1rem;
     width: 10rem;
@@ -427,12 +427,13 @@ body {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .history h3 {
     font-size: 1rem;
-    
   }
-  .history-temp, .history-humidity, .history-wind {
-    font-size: .8rem;
+  .history-temp,
+  .history-humidity,
+  .history-wind {
+    font-size: 0.8rem;
   }
 }

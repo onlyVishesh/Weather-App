@@ -127,20 +127,21 @@ body {
 }
 
 .history {
-  width: 20rem;
-  height: 13rem;
+  margin-top: 1rem;
+  width: 14rem;
+  height: 10rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
 .history h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .history-temp,
 .history-humidity,
 .history-wind {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: left;
 }
 

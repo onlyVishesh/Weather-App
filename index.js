@@ -1,4 +1,4 @@
-const apiKey = "cfc062e61b31013cdc29a9bd443e646b";
+import apiKey from "./weatherApiKey.js";
 const apiURL = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=`;
 
 // Check if data is present in local storage or not

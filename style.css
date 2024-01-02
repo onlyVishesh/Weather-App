@@ -128,7 +128,7 @@ body {
 
 .history {
   margin-top: 1rem;
-  width: 14rem;
+  width: 16rem;
   height: 10rem;
   display: flex;
   flex-direction: column;
@@ -137,6 +137,7 @@ body {
 
 .history h3 {
   font-size: 1.5rem;
+  margin-top: -1rem;
 }
 .history-temp,
 .history-humidity,
@@ -235,6 +236,7 @@ body {
 
   .history h3 {
     font-size: 1.5rem;
+    margin-top: 0rem;
   }
   .history-temp,
   .history-humidity,
@@ -333,6 +335,7 @@ body {
 
   .history h3 {
     font-size: 1rem;
+    margin-top: 0rem;
   }
   .history-temp,
   .history-humidity,
@@ -431,6 +434,7 @@ body {
 
   .history h3 {
     font-size: 1rem;
+    margin-top: 0rem;
   }
   .history-temp,
   .history-humidity,

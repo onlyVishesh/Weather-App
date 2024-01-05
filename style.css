@@ -92,12 +92,13 @@ body {
 
 .humidity,
 .wind {
-  font-size: 2vw;
+  font-size: 1.7vw;
   margin-top: -6px;
 }
 .humidity-p,
 .wind-p {
-  font-size: 1.5vw;
+  font-size: 1.6vw;
+  padding: 1rem;
 }
 
 .weather {
@@ -110,11 +111,44 @@ body {
   display: none;
 }
 
+.history-cards {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.history-cards h2 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.history {
+  width: 20rem;
+  height: 13rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.history h3 {
+  font-size: 2rem;
+}
+.history-temp,
+.history-humidity,
+.history-wind {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .card {
     width: 90%;
     max-width: 70vw;
-    margin: 20vw auto 0px;
+    margin: 7vw auto 0px;
     border-radius: 2vw;
     padding: 2vw 1.5vw;
   }
@@ -162,18 +196,49 @@ body {
 
   .humidity,
   .wind {
-    font-size: 4vw;
+    font-size: 3vw;
     margin-top: -6px;
   }
 
   .humidity-p,
   .wind-p {
-    font-size: 3vw;
+    font-size: 2vw;
   }
 
   .error {
     margin-top: 2vw;
     font-size: 5vw;
+  }
+  .history-cards {
+    position: static;
+    padding-top: 2rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .history-cards h2 {
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  .history {
+    margin-top: 1rem;
+    width: 14rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .history h3 {
+    font-size: 1.5rem;
+  }
+  .history-temp,
+  .history-humidity,
+  .history-wind {
+    font-size: 1.2rem;
   }
 }
 
@@ -242,15 +307,46 @@ body {
     margin-top: 2vw;
     font-size: 5vw;
   }
+  .history-cards {
+    position: static;
+    padding-top: 2rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .history-cards h2 {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  .history {
+    margin-top: 1rem;
+    width: 10rem;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .history h3 {
+    font-size: 1rem;
+  }
+  .history-temp,
+  .history-humidity,
+  .history-wind {
+    font-size: 0.8rem;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .card {
     width: 90%;
-    max-width: 70vw;
+    max-width: 75vw;
     margin: 20vw auto 0px;
     border-radius: 2vw;
-    padding: 2vw 1.5vw;
+    padding: 5vw 1.5vw;
   }
 
   .search input {
@@ -308,5 +404,36 @@ body {
   .error {
     margin-top: 2vw;
     font-size: 5vw;
+  }
+  .history-cards {
+    position: static;
+    padding-top: 2rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .history-cards h2 {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  .history {
+    margin-top: 1rem;
+    width: 10rem;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .history h3 {
+    font-size: 1rem;
+  }
+  .history-temp,
+  .history-humidity,
+  .history-wind {
+    font-size: 0.8rem;
   }
 }

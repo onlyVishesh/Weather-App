@@ -1,28 +1,36 @@
 const apiKey = "cfc062e61b31013cdc29a9bd443e646b";
 const apiURL = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=`;
 
-let cityData = [];
+// Check if data is present in local storage or not
 
+let cityData = JSON.parse(localStorage.getItem("cityData")) || [];
+
+// Function to update recently viewed tab
 let updateHistory = () => {
-  document.querySelector(".history-cards").style.display = "flex"
+  if (cityData.length === 0) {
+    document.querySelector(".history-cards").style.display = "none";
+  } else {
+    document.querySelector(".history-cards").style.display = "flex";
+  }
   let historyCities = document.querySelector(".history-cities");
   let cityList = cityData.map(
     (city) => `
-  <div class="card history">
-    <h3 class="history-city">${city.name}</h3>
-    <p class="history-temp">Temperature - ${Math.round(city.main.temp * 10) / 10} &deg C</p>
-    <p class="history-humidity">Humidity - ${city.main.humidity}%</p>
-    <p class="history-wind">Wind Speed- ${city.wind.speed} Km/h</p>
-  </div>
-  `
+      <div class="card history">
+        <h3 class="history-city">${city.name}</h3>
+        <p class="history-temp">Temperature - ${
+          Math.round(city.main.temp * 10) / 10
+        } &deg C</p>
+        <p class="history-humidity">Humidity - ${city.main.humidity}%</p>
+        <p class="history-wind">Wind Speed- ${city.wind.speed} Km/h</p>
+      </div>
+    `
   );
-  historyCities.innerHTML = cityList.join("")
+  historyCities.innerHTML = cityList.join("");
 };
 
-let checkCityPresent = (city, arr) => {
-  console.log(city.toLowerCase());
-  // console.log(arr.name.toLowerCase())
+// Function to check if city is present tin array or not
 
+let checkCityPresent = (city, arr) => {
   for (let i = 0; i < arr.length; i++) {
     if (city.toLowerCase() === arr[i].name.toLowerCase()) {
       return true;
@@ -31,15 +39,17 @@ let checkCityPresent = (city, arr) => {
   return false;
 };
 
+//  Function to add city
+
 let addCity = (city, data) => {
-  console.log(cityData.length, checkCityPresent(city, cityData));
   if (cityData.length < 3 && !checkCityPresent(city, cityData)) {
     cityData.unshift(data);
   } else if (!checkCityPresent(city, cityData)) {
     cityData.pop();
     cityData.unshift(data);
   }
-  updateHistory()
+  localStorage.setItem("cityData", JSON.stringify(cityData));
+  updateHistory();
 };
 
 document.querySelector(".search button").addEventListener("click", () => {
@@ -55,6 +65,8 @@ document.querySelector(".search").addEventListener("keydown", (e) => {
     document.querySelector(".search input").value = "";
   }
 });
+
+// async function to display data
 
 async function checkWeather(city) {
   const response = await fetch(apiURL + city + `&appid=${apiKey}`);
@@ -79,3 +91,6 @@ async function checkWeather(city) {
     document.querySelector(".error").style.display = "none";
   }
 }
+
+// Load cityData on page load
+updateHistory();

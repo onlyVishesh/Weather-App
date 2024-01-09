@@ -1,4 +1,4 @@
-const apiKey = `cfc062e61b31013cdc29a9bd443e646b`;
+import TOKEN from "./config";
 const apiURL = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=`;
 
 // Check if data is present in local storage or not
@@ -17,9 +17,8 @@ let updateHistory = () => {
     (city) => `
       <div class="card history">
         <h3 class="history-city">${city.name}</h3>
-        <p class="history-temp">Temperature - ${
-          Math.round(city.main.temp * 10) / 10
-        } &deg C</p>
+        <p class="history-temp">Temperature - ${Math.round(city.main.temp * 10) / 10
+      } &deg C</p>
         <p class="history-humidity">Humidity - ${city.main.humidity}%</p>
         <p class="history-wind">Wind Speed- ${city.wind.speed} Km/h</p>
       </div>
@@ -69,7 +68,7 @@ document.querySelector(".search").addEventListener("keydown", (e) => {
 // async function to display data
 
 async function checkWeather(city) {
-  const response = await fetch(apiURL + city + `&appid=${apiKey}`);
+  const response = await fetch(apiURL + city + `&appid=${TOKEN}`);
 
   if (response.status == 404) {
     document.querySelector(".weather").style.display = "none";

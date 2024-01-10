@@ -1,4 +1,4 @@
-import TOKEN from "./config";
+const apiKey = `cfc062e61b31013cdc29a9bd443e646b`;
 const apiURL = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=`;
 
 // Check if data is present in local storage or not
@@ -68,7 +68,7 @@ document.querySelector(".search").addEventListener("keydown", (e) => {
 // async function to display data
 
 async function checkWeather(city) {
-  const response = await fetch(apiURL + city + `&appid=${TOKEN}`);
+  const response = await fetch(apiURL + city + `&appid=${apiKey}`);
 
   if (response.status == 404) {
     document.querySelector(".weather").style.display = "none";
